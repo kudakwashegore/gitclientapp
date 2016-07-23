@@ -18,21 +18,24 @@
 
     <!--our angular app-->
     <script src="app.js"></script>    
-    <script src="scripts/config.js"></script>
-    <script src="scripts/services/gitservice.js"></script>
+    <script src="scripts/config.js"></script>    
+    <script src="scripts/services/gitdatafactory.js"></script>
+    <script src="scripts/services/userservice.js"></script>
+    <script src="scripts/directives/repodisplaydirective.js"></script>
     <script src="scripts/controllers/homecontroller.js"></script>
+    <script src="scripts/controllers/reposcontroller.js"></script>
 </head>
 
 <body ng-app="gitApp">
   <nav class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand">Github Repositories</a>
+        <a class="navbar-brand">Github Users Repositories App</a>
       </div>
     </div>
   </nav>
   <div class="container">
-      <div ui-view></div>
+      <div ng-view></div>
   </div>  
 </body>
 </html>

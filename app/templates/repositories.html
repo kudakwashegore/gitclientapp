@@ -1,0 +1,36 @@
+<!--view template for repo list page -->
+<div class="back">
+    <a href="#/"><i class="glyphicon glyphicon-circle-arrow-left"></i> Back to search</a>
+</div>
+
+<!--some validation-->
+<!--check if user was found -->
+<div class="alert alert-warning info" role="alert" ng-show="repositories.data.message === 'Not Found'">
+    <p>User <strong>{{username}}</strong> was not found on GitHub. Please click <a href="#/">here</a> and try a different user.</p>
+</div>
+
+<!--check if user has some repos -->
+<div class="alert alert-warning info" role="alert" ng-show="repositories.data.length === 0">
+    <p>User <strong>{{username}}</strong>, does not have any repositories.  Please click <a href="#/">here</a> and try a different user.</p>
+</div>
+
+<!--check if Github responded-->
+<div class="alert alert-danger info" role="alert" ng-show="error.status">
+    <p>Could not get repositories for user <strong>{{username}}</strong>, GitHub did not respond ({{error.message}}). Please click <a href="#/">here</a> and try again</p>
+</div>
+
+<!--if we reached this far, now displaying available data -->
+<div class="details" ng-show="!repositories.data.message && repositories.data.length > 0">
+    
+    <!--get some user details to display -->
+    <div class="user-details" >
+        <img src="{{repositories.data[0].owner.avatar_url}}" />
+        <h4>Repositories for {{username}}</h4>
+    </div>
+    
+    <!--calling our custom directive to handle repo list data-->
+    <repo-display ng-repeat="repo in repositories.data" repo-name="{{repo.name}}" created-date="{{repo.created_at}}" updated-date="{{repo.updated_at}}" description="{{repo.description}}" url="{{repo.html_url}}" date-format="MMMM d y, HH:mm:ss"></repo-display>
+    
+</div>
+
+

@@ -1,0 +1,16 @@
+<div class="panel panel-primary repo">
+  
+
+  <div class="panel-heading">
+      <div class="row">
+            <h3 class="col-lg-5 col-md-5">{{repoName}}</h3>
+            <div class="col-lg-7 col-md-7"><small><i class="glyphicon glyphicon-calendar"></i> Created: {{createdDate | date: dateFormat}}</small> <small><i class="glyphicon glyphicon-ok-circle"></i> Updated: {{updatedDate | date: dateFormat}}</small></div>
+      </div>
+      
+    </div>
+  <div class="panel-body">
+      <p>{{description}}</p>
+      <p>Url: <small><a href="{{url}}" target="_blank">{{url}}</a></small></p>
+  </div>
+    
+</div>

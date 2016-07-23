@@ -1,0 +1,28 @@
+/*some few css lines to override default bootstrap styles*/
+.container{
+    max-width: 940px;
+}
+.user-details{
+    margin: 30px 0;
+}
+.user-details{
+    text-align: center;
+}
+.user-details img{
+    width: 120px;
+    border-radius: 100px;
+}
+h3{
+    margin: 0;
+}
+.repo .panel-heading{
+    line-height: 25px;
+} 
+.repo .panel-heading small{
+    margin-right: 15px;
+    display: inline-block;
+    font-size: 11px;
+}
+.info{
+    margin: 30px 0;
+}

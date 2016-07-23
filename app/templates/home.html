@@ -1,1 +1,14 @@
-Home View
+<!--view template for home -->
+<div class="row"> 
+    <form name="form" ng-submit="getRepos()">
+        <div class="col-lg-6 col-md-offset-3">
+            <h4>Enter username for a Github user</h4>
+            <div class="input-group">
+              <input type="text" name="username" class="form-control" placeholder="Search for..." ng-model="username" required />            
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">View Repos</button>
+              </span>  
+            </div>
+          </div>
+    </form>  
+</div>
