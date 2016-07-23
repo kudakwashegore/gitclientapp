@@ -1,1 +1,1 @@
-var gitApp = angular.module('gitApp',['ngRoutes', 'ngResource']);
+var gitApp = angular.module('gitApp',['ngRoute', 'ngResource']);
