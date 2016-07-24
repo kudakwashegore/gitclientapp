@@ -29,7 +29,7 @@
     </div>
     
     <!--calling our custom directive to handle repo list data-->
-    <repo-display ng-repeat="repo in repositories.data" repo-name="{{repo.name}}" created-date="{{repo.created_at}}" updated-date="{{repo.updated_at}}" description="{{repo.description}}" url="{{repo.html_url}}" date-format="MMMM d y, HH:mm:ss"></repo-display>
+    <repo-display ng-repeat="repo in repositories.data" repo-name="{{repo.name}}" created-date="{{repo.created_at}}" updated-date="{{repo.updated_at}}" description="{{repo.description}}" url="{{repo.html_url}}" date-format="d MMMM y, HH:mm:ss"></repo-display>
     
 </div>
 
