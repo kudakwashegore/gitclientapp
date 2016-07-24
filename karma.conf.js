@@ -20,7 +20,7 @@ module.exports = function(config) {
       '../node_modules/angular-mocks/angular-mocks.js',
       './app/app.js',
       './app/scripts/services/gitdatafactory.js',
-      './tests/gitservice.spec.js'
+      './tests/gitdatafactory.spec.js'
     ],
 
     // list of files to exclude
